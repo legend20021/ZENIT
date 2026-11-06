@@ -3,7 +3,15 @@ document.documentElement.classList.add("js");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const menuButton = document.querySelector(".menu-toggle");
 const primaryNav = document.querySelector("#primary-nav");
+const siteHeader = document.querySelector(".site-header");
 const mobileViewport = window.matchMedia("(max-width: 680px)");
+
+function updateHeaderState() {
+  siteHeader?.classList.toggle("is-scrolled", window.scrollY > 24);
+}
+
+updateHeaderState();
+window.addEventListener("scroll", updateHeaderState, { passive: true });
 
 function closeMenu(returnFocus = false) {
   if (!menuButton || !primaryNav || !mobileViewport.matches) return;
@@ -41,8 +49,7 @@ if (menuButton && primaryNav) {
 const sensorDescriptions = {
   rs485: { title: "RS‑485", copy: "Integramos equipos y sensores compatibles con RS‑485; se valida cada modelo y la información requerida." },
   ma: { title: "4–20 mA", copy: "Recibimos señales industriales de 4–20 mA; la compatibilidad depende del transmisor, el rango y el proceso." },
-  pt100: { title: "Temperatura · Pt100", copy: "Integramos sensores industriales Pt100 para medir temperatura; validamos la interfaz y el rango según el proceso." },
-  termocupla: { title: "Termocuplas", copy: "Recibimos mediciones de termocuplas para procesos industriales; el tipo de sensor se confirma para cada aplicación." },
+  temperatura: { title: "Temperatura industrial", copy: "Integramos sensores Pt100 y termocuplas para medir temperatura; validamos el tipo de sensor, la interfaz y el rango según el proceso." },
   ph: { title: "pH", copy: "Recibimos señales de sensores compatibles; se valida el tipo de salida y la interfaz necesaria para cada aplicación." },
   nivel: { title: "Nivel", copy: "La medición de nivel puede integrarse con sensores compatibles por RS‑485 o mediante la señal adecuada al proceso." },
   presion: { title: "Presión", copy: "Podemos integrar transmisores de presión con salida de 4–20 mA, sujeto a validar el rango y la instalación." },
