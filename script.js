@@ -58,6 +58,22 @@ const sensorButtons = document.querySelectorAll(".sensor-choice");
 const sensorTitle = document.querySelector("#sensor-title");
 const sensorCopy = document.querySelector("#sensor-copy");
 const sensorReadout = document.querySelector(".sensor-readout");
+const sensorDialValue = document.querySelector("#sensor-dial-value");
+const sensorDialUnit = document.querySelector("#sensor-dial-unit");
+const sensorScaleLabel = document.querySelector("#sensor-scale-label");
+const sensorScaleStatus = document.querySelector("#sensor-scale-status");
+const sensorScaleFill = document.querySelector("#sensor-scale-fill");
+const sensorScaleMin = document.querySelector("#sensor-scale-min");
+const sensorScaleMid = document.querySelector("#sensor-scale-mid");
+const sensorScaleMax = document.querySelector("#sensor-scale-max");
+const sensorProfiles = {
+  rs485: { value: "485", unit: "bus", label: "Trama de comunicación", status: "Activa", min: "0", mid: "Señal", max: "100%", progress: "74%" },
+  ma: { value: "13.8", unit: "mA", label: "Corriente de entrada", status: "En rango", min: "4", mid: "12 mA", max: "20", progress: "62%" },
+  temperatura: { value: "35.0", unit: "°C", label: "Temperatura industrial", status: "Estable", min: "0", mid: "35 °C", max: "70", progress: "50%" },
+  ph: { value: "6.8", unit: "pH", label: "Escala de acidez", status: "Normal", min: "0", mid: "7 neutro", max: "14", progress: "54%" },
+  nivel: { value: "78", unit: "%", label: "Nivel de depósito", status: "Supervisado", min: "0", mid: "50%", max: "100%", progress: "78%" },
+  presion: { value: "4.8", unit: "bar", label: "Presión de línea", status: "Estable", min: "0", mid: "5 bar", max: "10", progress: "46%" },
+};
 
 sensorButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -72,6 +88,18 @@ sensorButtons.forEach((button) => {
 
     sensorTitle.textContent = sensor.title;
     sensorCopy.textContent = sensor.copy;
+    const profile = sensorProfiles[button.dataset.sensor];
+    if (profile) {
+      sensorReadout?.style.setProperty("--sensor-progress", profile.progress);
+      if (sensorDialValue) sensorDialValue.textContent = profile.value;
+      if (sensorDialUnit) sensorDialUnit.textContent = profile.unit;
+      if (sensorScaleLabel) sensorScaleLabel.textContent = profile.label;
+      if (sensorScaleStatus) sensorScaleStatus.textContent = profile.status;
+      if (sensorScaleMin) sensorScaleMin.textContent = profile.min;
+      if (sensorScaleMid) sensorScaleMid.textContent = profile.mid;
+      if (sensorScaleMax) sensorScaleMax.textContent = profile.max;
+      if (sensorScaleFill) sensorScaleFill.style.width = profile.progress;
+    }
 
     if (sensorReadout) {
       sensorReadout.classList.remove("is-changing");
@@ -197,3 +225,48 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
   revealElements.forEach((element) => motionObserver.observe(element));
   motionSections.forEach((section) => motionObserver.observe(section));
 }
+
+const lifeMobileToggle = document.querySelector("#life-mobile-toggle");
+const lifeStockView = document.querySelector("#life-stock-view");
+const lifeMobileView = document.querySelector("#life-mobile-view");
+const lifeStockBack = document.querySelector("#life-stock-back");
+
+function setLifeDashboardMode(isMobile) {
+  if (!lifeMobileToggle || !lifeStockView || !lifeMobileView) return;
+  lifeStockView.hidden = isMobile;
+  lifeMobileView.hidden = !isMobile;
+  lifeMobileToggle.setAttribute("aria-pressed", String(isMobile));
+  lifeMobileToggle.setAttribute("aria-label", isMobile ? "Cambiar a vista de escritorio" : "Cambiar a vista móvil");
+  lifeMobileToggle.classList.toggle("is-mobile", isMobile);
+}
+
+lifeMobileToggle?.addEventListener("click", () => {
+  setLifeDashboardMode(lifeMobileToggle.getAttribute("aria-pressed") !== "true");
+});
+lifeStockBack?.addEventListener("click", () => setLifeDashboardMode(false));
+
+const temperatureReadouts = document.querySelectorAll(".life-temperature-value");
+let temperatureTick = 0;
+
+function updateIndustrialTelemetry() {
+  if (temperatureReadouts.length) {
+    const temperature = (35 + Math.sin(temperatureTick / 3) * 0.22).toFixed(1);
+    temperatureReadouts.forEach((readout) => {
+      readout.innerHTML = `${temperature} <small>°C</small>`;
+    });
+  }
+
+  document.querySelectorAll(".life-bars i").forEach((bar, index) => {
+    const baseLevel = Number.parseFloat(bar.style.getPropertyValue("--base-level") || bar.style.getPropertyValue("--level"));
+    if (!Number.isFinite(baseLevel)) return;
+    const variation = Math.sin((temperatureTick + index) / 2.5) * 5;
+    bar.style.setProperty("--level", `${Math.max(28, Math.min(88, baseLevel + variation))}%`);
+  });
+  temperatureTick += 1;
+}
+
+document.querySelectorAll(".life-bars i").forEach((bar) => {
+  bar.style.setProperty("--base-level", bar.style.getPropertyValue("--level").replace("%", ""));
+});
+updateIndustrialTelemetry();
+window.setInterval(updateIndustrialTelemetry, 1600);

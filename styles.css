@@ -6,6 +6,267 @@
   font-display: swap;
 }
 
+/* Lifestats dashboard */
+.life-dashboard{display:grid;grid-template-columns:54px minmax(0,1fr);min-height:500px;overflow:hidden;border:1px solid rgb(209 227 232 / 18%);border-radius:1rem;background:linear-gradient(135deg,rgb(103 131 135 / 72%),rgb(42 61 66 / 82%));box-shadow:0 1.4rem 3rem rgb(2 48 71 / 18%);color:#f5fbf7}
+.life-dashboard-rail{display:flex;flex-direction:column;align-items:center;padding:1rem .5rem;background:rgb(8 28 35 / 30%);border-right:1px solid rgb(255 255 255 / 10%)}.life-dashboard-mark{display:grid;place-items:center;width:1.75rem;height:1.75rem;margin-bottom:2.5rem;border:1px solid rgb(255 255 255 / 44%);border-radius:50%;font-weight:600}.life-rail-button{width:2rem;height:2.2rem;margin:.25rem 0;background:transparent;color:rgb(232 246 242 / 58%);font-size:1.05rem}.life-rail-button.is-active,.life-rail-button:hover{color:#fff}.life-dashboard-main{min-width:0;padding:1.25rem 1.45rem 0}.life-dashboard-header,.life-card-heading,.life-dashboard-actions{display:flex;align-items:center;justify-content:space-between;gap:.8rem}.life-dashboard-header{margin-bottom:1.1rem}.life-dashboard-header span,.life-card-heading button,.life-card-heading span{color:rgb(232 246 242 / 60%);font-size:.72rem}.life-dashboard-header h3{margin:.12rem 0 0;font-size:1.6rem;letter-spacing:-.03em}.life-dashboard-actions{justify-content:flex-end}.life-online{display:flex;align-items:center;gap:.35rem}.life-online i,.life-dashboard-footer i{width:.4rem;height:.4rem;border-radius:50%;background:#7bd792;box-shadow:0 0 .45rem #7bd792}.life-mobile-toggle{padding:.45rem .7rem;border:1px solid rgb(255 255 255 / 18%);border-radius:.45rem;background:rgb(8 28 35 / 22%);font-size:.74rem}.life-mobile-toggle b{margin-left:.4rem;color:rgb(232 246 242 / 65%);font-weight:400}.life-dashboard-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(8rem,.7fr);gap:.65rem}.life-card{border:1px solid rgb(209 227 232 / 12%);background:linear-gradient(145deg,rgb(182 204 199 / 22%),rgb(55 78 81 / 32%));box-shadow:inset 0 1px rgb(255 255 255 / 7%);border-radius:.7rem}.life-card-heading{min-height:1.3rem}.life-card-heading strong{font-size:.82rem}.life-card-heading button{padding:0;border:0;background:transparent}.life-activity,.life-overview{padding:.75rem}.life-bars{height:8.6rem;display:flex;align-items:flex-end;justify-content:space-around;gap:.4rem;padding-top:.45rem}.life-bars>div{display:flex;flex:1;height:100%;align-items:center;justify-content:flex-end;flex-direction:column}.life-bars span,.life-bars b{color:rgb(245 251 247 / 61%);font-size:.58rem;font-weight:400}.life-bars i{display:block;width:100%;max-width:1.35rem;height:var(--level);min-height:2.5rem;margin:.25rem 0;border-radius:.45rem;background:linear-gradient(#b3c2c1aa,#839a9b70)}.life-bars i.is-highlight{background:linear-gradient(#f2cf45,#bd9f1d88)}.life-summary{display:flex;align-items:center;gap:.9rem;min-height:8.8rem}.life-donut{position:relative;display:grid;place-items:center;flex:0 0 6rem;width:6rem;height:6rem;border-radius:50%;background:conic-gradient(#f0c600 0 26%,#41aee2 26% 75%,#9fb5b6 75%)}.life-donut::before{width:4.6rem;height:4.6rem;border-radius:50%;background:#526e70;content:""}.life-donut span{position:absolute;display:grid;place-items:center}.life-donut strong{font-size:1rem}.life-donut small{color:rgb(245 251 247 / 62%);font-size:.55rem}.life-summary ul{display:grid;gap:.65rem;margin:0;padding:0;list-style:none;color:rgb(245 251 247 / 62%);font-size:.57rem}.life-summary li{display:grid;grid-template-columns:.35rem 1fr;gap:.3rem}.life-summary li i{width:.3rem;height:.3rem;margin-top:.18rem;border-radius:50%}.life-summary .yellow{background:#f0c600}.life-summary .blue{background:#41aee2}.life-summary .orange{background:#ea9a52}.life-summary li b{grid-column:2;color:#fff;font-size:.7rem;font-weight:500}.life-summary li small{margin-left:.25rem;color:rgb(245 251 247 / 56%);font-size:.5rem}.life-stat-stack{display:grid;gap:.65rem}.life-stat-stack article{display:flex;align-items:center;gap:.65rem;padding:.7rem}.life-stat-stack article>span{display:grid;place-items:center;width:1.65rem;height:1.65rem;border:1px solid rgb(255 255 255 / 35%);border-radius:50%;color:#badfe7}.life-stat-stack strong{font-size:.78rem;font-weight:500}.life-stat-stack small{font-size:.58rem}.life-stat-stack p{margin:0;color:rgb(245 251 247 / 58%);font-size:.55rem}.life-bottom-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:.7rem;margin-top:.9rem}.life-challenges,.life-calendar{min-width:0}.life-card-heading span{font-size:.58rem}.life-challenge-list{margin-top:.25rem;padding:.2rem .7rem}.life-challenge-list>div{display:grid;grid-template-columns:1.4rem minmax(0,1fr) auto auto;align-items:center;gap:.45rem;min-height:2.25rem;border-bottom:1px solid rgb(255 255 255 / 8%)}.life-challenge-list>div:last-child{border-bottom:0}.life-challenge-list strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.65rem;font-weight:500}.life-challenge-list small{color:rgb(245 251 247 / 56%);font-size:.52rem}.life-ring{width:1.15rem;height:1.15rem;border:1px solid #e7f2eb;border-radius:50%}.life-ring.active{border-top-color:transparent;transform:rotate(-25deg)}.life-ring.complete{display:grid;place-items:center;background:rgb(255 255 255 / 15%);font-size:.65rem}.life-pill{padding:.3rem .5rem;border-radius:.6rem;font-size:.52rem}.life-pill.ongoing{background:#c9d62e;color:#253117}.life-pill.done{background:#40ce8b;color:#153a2a}.life-calendar>.life-card{margin-top:.25rem;padding:.7rem}.life-week,.life-dates{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}.life-week{color:rgb(245 251 247 / 56%);font-size:.5rem}.life-dates{margin-top:.4rem;font-size:.66rem}.life-dates span{padding:.25rem 0}.life-dates .today{border-radius:.3rem;background:rgb(255 255 255 / 15%)}.life-output{display:grid;grid-template-columns:1fr auto;align-items:center;margin-top:.65rem;padding:.55rem .7rem}.life-output strong{font-size:.72rem;font-weight:500}.life-output small{color:rgb(245 251 247 / 58%);font-size:.52rem}.life-output em{grid-row:span 2;padding:.3rem .45rem;border-radius:.55rem;background:rgb(255 255 255 / 10%);color:rgb(245 251 247 / 72%);font-size:.52rem;font-style:normal}.life-dashboard-footer{display:flex;justify-content:space-between;gap:.6rem;padding:1rem 0 .9rem;border-top:1px solid rgb(255 255 255 / 10%);margin-top:1rem;color:rgb(232 246 242 / 60%);font-size:.6rem}.life-dashboard-footer span{display:flex;align-items:center;gap:.35rem}.life-mobile-view{display:flex;align-items:center;justify-content:center;gap:4rem;min-height:27rem}.life-phone{width:12.5rem;padding:.5rem;border:2px solid rgb(232 246 242 / 35%);border-radius:1.7rem;background:#132a30;box-shadow:0 1rem 2rem rgb(0 0 0 / 28%);transform:rotate(-2deg)}.life-phone-notch{width:3.2rem;height:.8rem;margin:0 auto .45rem;border-radius:1rem;background:#07191e}.life-phone-screen{min-height:25rem;padding:.7rem;border-radius:1.25rem;background:linear-gradient(160deg,#395356,#1d3539)}.life-phone-status,.life-phone-title{display:flex;justify-content:space-between;font-size:.5rem}.life-phone-title{margin-top:1rem;font-size:.75rem}.life-phone-screen>p{margin:1.3rem 0 .55rem;color:rgb(245 251 247 / 65%);font-size:.6rem}.life-phone-main,.life-phone-stats>div,.life-phone-chart{padding:.65rem;border:1px solid rgb(255 255 255 / 10%);border-radius:.7rem;background:rgb(166 190 185 / 15%)}.life-phone-main>span,.life-phone-main>small,.life-phone-stats span,.life-phone-stats b{display:block;color:rgb(245 251 247 / 60%);font-size:.48rem}.life-phone-main strong{display:block;margin:.4rem 0;font-size:1.8rem;font-weight:400}.life-phone-main strong small{font-size:.7rem}.life-phone-main i{display:block;width:75%;height:.25rem;border-radius:.3rem;background:#f0c600}.life-phone-stats{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-top:.4rem}.life-phone-stats strong{display:block;margin:.35rem 0 .15rem;font-size:.7rem;font-weight:500}.life-phone-stats b{color:#8ed6a3}.life-phone-chart{margin-top:.4rem}.life-phone-chart>strong{font-size:.58rem}.life-phone-chart>div{display:flex;align-items:end;justify-content:space-around;height:3.7rem;margin-top:.45rem}.life-phone-chart i{width:.45rem;height:var(--level,50%);border-radius:.2rem;background:#a9bfba}.life-phone-chart i:nth-child(4){height:80%;background:#f0c600}.life-phone-chart small{font-size:.45rem;color:rgb(245 251 247 / 55%)}.life-phone-screen nav{margin-top:.8rem;text-align:center;color:#e5f2eb;word-spacing:.35rem;font-size:.8rem}.life-mobile-copy{max-width:14rem}.life-mobile-copy>span{color:rgb(232 246 242 / 60%);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em}.life-mobile-copy h3{margin:.4rem 0 .7rem;font-size:1.55rem;line-height:1.05}.life-mobile-copy p{margin:0;color:rgb(232 246 242 / 65%);font-size:.85rem}.life-mobile-copy button{margin-top:1.2rem;padding:.55rem .7rem;border:1px solid rgb(255 255 255 / 18%);border-radius:.4rem;background:rgb(255 255 255 / 8%);font-size:.68rem}
+@media (max-width:850px){.life-dashboard-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.life-stat-stack{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}.life-bottom-grid{grid-template-columns:1fr}.life-mobile-view{gap:2rem}}
+@media (max-width:560px){.life-dashboard{grid-template-columns:1fr}.life-dashboard-rail{display:none}.life-dashboard-main{padding:.9rem}.life-dashboard-header{align-items:flex-start}.life-dashboard-header h3{font-size:1.35rem}.life-online{display:none}.life-dashboard-grid{grid-template-columns:1fr}.life-stat-stack{grid-column:auto}.life-stat-stack article{min-height:3.2rem}.life-bottom-grid{margin-top:.7rem}.life-challenge-list>div{grid-template-columns:1.2rem minmax(0,1fr) auto}.life-challenge-list small{display:none}.life-mobile-view{flex-direction:column;gap:1.2rem;padding:1rem 0}.life-mobile-copy{text-align:center}.life-mobile-copy h3{font-size:1.3rem}.life-dashboard-footer{font-size:.52rem}}
+
+.sensor-instrument{display:grid;grid-template-columns:7rem minmax(0,1fr);align-items:center;gap:1rem;margin-top:1rem;padding:.85rem 1rem;border:1px solid var(--line);background:var(--page)}
+.sensor-dial{position:relative;display:grid;place-items:center;width:6rem;height:6rem;border-radius:50%;background:conic-gradient(var(--cyan) var(--sensor-progress,74%),rgb(2 48 71 / 12%) 0);transform:rotate(-35deg)}
+.sensor-dial::before{width:4.7rem;height:4.7rem;border-radius:50%;background:var(--white);content:""}
+.sensor-dial::after{position:absolute;width:.25rem;height:2rem;border-radius:.2rem;background:var(--blue);content:"";transform:translateY(-.85rem) rotate(34deg);transform-origin:bottom center}
+.sensor-dial-value,.sensor-dial-unit{position:absolute;z-index:1;transform:rotate(35deg)}
+.sensor-dial-value{margin-top:.1rem;color:var(--blue);font-size:1.35rem;font-weight:600;line-height:1}.sensor-dial-unit{margin-top:2.5rem;color:var(--ink-soft);font-size:.65rem}
+.sensor-scale>div,.sensor-scale>small{display:flex;justify-content:space-between;gap:.5rem}.sensor-scale>div{color:var(--ink-soft);font-size:.75rem}.sensor-scale strong{color:var(--cyan);font-weight:600}.sensor-scale>i{display:block;height:.5rem;margin:.75rem 0 .35rem;overflow:hidden;background:rgb(2 48 71 / 10%)}.sensor-scale>i b{display:block;width:var(--sensor-progress,74%);height:100%;background:var(--cyan);transition:width 320ms var(--ease-out)}.sensor-scale>small{color:var(--ink-soft);font-size:.65rem}
+@media (max-width:680px){.sensor-instrument{grid-template-columns:6rem minmax(0,1fr);gap:.75rem;padding:.75rem}.sensor-dial{width:5.25rem;height:5.25rem}.sensor-dial::before{width:4.1rem;height:4.1rem}.sensor-dial-value{font-size:1.1rem}.sensor-dial-unit{margin-top:2.1rem}.sensor-scale>div{font-size:.68rem}.sensor-scale>small{font-size:.58rem}}
+
+/* Final visual refinement for the dashboard and sensor instrument */
+.life-dashboard {
+  border-color: rgb(115 157 164 / 28%);
+  background:
+    radial-gradient(circle at 8% 0%, rgb(255 255 255 / 13%), transparent 34%),
+    linear-gradient(135deg, #486f78 0%, #315861 48%, #24464f 100%);
+  box-shadow: 0 1.5rem 3.5rem rgb(1 34 43 / 22%), inset 0 1px rgb(255 255 255 / 18%);
+}
+
+.life-dashboard-rail {
+  background: rgb(18 52 60 / 48%);
+  border-color: rgb(210 239 235 / 20%);
+}
+
+.life-dashboard-mark {
+  width: 2rem;
+  height: 2rem;
+  color: #e9faf3;
+  background: rgb(255 255 255 / 9%);
+}
+
+.life-rail-button {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: .65rem;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.life-rail-button.is-active,
+.life-rail-button:hover {
+  background: rgb(231 250 242 / 15%);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.life-dashboard-header {
+  min-height: 3.2rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid rgb(222 244 237 / 15%);
+}
+
+.life-dashboard-header h3 {
+  font-size: 1.8rem;
+}
+
+.life-mobile-toggle {
+  min-height: 2.35rem;
+  padding: .5rem .85rem;
+  border-color: rgb(218 245 237 / 32%);
+  border-radius: .65rem;
+  background: rgb(10 40 48 / 34%);
+  box-shadow: 0 .35rem .8rem rgb(6 38 44 / 13%);
+}
+
+.life-mobile-toggle:hover {
+  border-color: rgb(225 251 241 / 54%);
+  background: rgb(112 211 214 / 23%);
+}
+
+.life-card {
+  border-color: rgb(223 246 237 / 17%);
+  border-radius: .85rem;
+  background: linear-gradient(145deg, rgb(174 207 201 / 25%), rgb(53 94 99 / 39%));
+  box-shadow: inset 0 1px rgb(255 255 255 / 13%), 0 .65rem 1.25rem rgb(5 42 48 / 10%);
+}
+
+.life-activity,
+.life-overview {
+  min-height: 11.6rem;
+  padding: 1rem;
+}
+
+.life-card-heading strong {
+  font-size: .88rem;
+}
+
+.life-bars {
+  height: 9.35rem;
+}
+
+.life-bars i {
+  max-width: 1.45rem;
+  border-radius: .55rem;
+}
+
+.life-bars i.is-highlight {
+  box-shadow: 0 0 .8rem rgb(242 201 0 / 20%);
+}
+
+.life-summary {
+  min-height: 9.5rem;
+}
+
+.life-donut {
+  flex-basis: 6.35rem;
+  width: 6.35rem;
+  height: 6.35rem;
+  box-shadow: 0 0 1rem rgb(49 190 229 / 18%);
+}
+
+.life-donut::before {
+  width: 4.85rem;
+  height: 4.85rem;
+  background: #3a6870;
+}
+
+.life-stat-stack article {
+  min-height: 3.25rem;
+  background: linear-gradient(145deg, rgb(175 208 201 / 25%), rgb(47 86 92 / 42%));
+}
+
+.life-stat-stack article > span {
+  background: rgb(214 244 235 / 10%);
+}
+
+.life-challenge-list {
+  padding: .35rem .85rem;
+}
+
+.life-challenge-list > div {
+  min-height: 2.55rem;
+}
+
+.life-pill {
+  min-height: 1.55rem;
+  padding: .35rem .65rem;
+  border: 1px solid rgb(255 255 255 / 20%);
+  font-weight: 600;
+}
+
+.life-pill.ongoing {
+  background: #d3dd46;
+  color: #26331e;
+}
+
+.life-pill.done {
+  background: #70daa3;
+  color: #173c2c;
+}
+
+.life-dashboard-footer {
+  padding-top: 1.15rem;
+  color: rgb(230 247 239 / 74%);
+}
+
+.sensor-instrument {
+  min-height: 8.2rem;
+  padding: 1rem 1.2rem;
+  border-color: #b7d1d6;
+  border-radius: .85rem;
+  background: linear-gradient(135deg, #f8fbfb 0%, #e8f2f3 100%);
+  box-shadow: 0 .55rem 1.2rem rgb(2 48 71 / 8%);
+}
+
+.sensor-dial {
+  width: 6.35rem;
+  height: 6.35rem;
+  background: conic-gradient(#188eaa 0 var(--sensor-progress, 74%), #cbdde0 var(--sensor-progress, 74%) 100%);
+  box-shadow: 0 .45rem 1rem rgb(33 158 188 / 19%);
+}
+
+.sensor-dial::before {
+  width: 4.95rem;
+  height: 4.95rem;
+  background: #fff;
+}
+
+.sensor-dial-value {
+  margin-top: -.5rem;
+  color: #023047;
+  font-size: 1.4rem;
+}
+
+.sensor-dial-unit {
+  margin-top: 1.8rem;
+  color: #466a76;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.sensor-scale {
+  min-width: 0;
+}
+
+.sensor-scale > div {
+  color: #355b69;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.sensor-scale strong {
+  color: #16839d;
+}
+
+.sensor-scale > i {
+  height: .7rem;
+  margin: .9rem 0 .4rem;
+  border-radius: 999px;
+  background: #cfdee1;
+}
+
+.sensor-scale > i b {
+  background: linear-gradient(90deg, #147f98, #38b8cf);
+  box-shadow: 0 0 .6rem rgb(33 158 188 / 30%);
+}
+
+.sensor-scale > small {
+  color: #5b7780;
+  font-size: .7rem;
+}
+
+.readout-trace {
+  height: 2rem;
+  margin-top: .85rem;
+  opacity: .8;
+}
+
+.compatibility-note {
+  color: #52717b;
+}
+
+@media (max-width: 680px) {
+  .life-dashboard-header {
+    min-height: 0;
+  }
+
+  .sensor-instrument {
+    min-height: 7.3rem;
+    padding: .8rem;
+  }
+
+  .sensor-dial {
+    width: 5.7rem;
+    height: 5.7rem;
+  }
+
+  .sensor-dial::before {
+    width: 4.45rem;
+    height: 4.45rem;
+  }
+}
+
+.life-dashboard{background:linear-gradient(135deg,#294b53 0%,#18383f 52%,#122b32 100%);border-color:rgb(161 222 224 / 28%);box-shadow:0 1.5rem 3.5rem rgb(2 48 71 / 22%),inset 0 1px rgb(255 255 255 / 12%)}
+.life-dashboard-rail{background:rgb(5 26 33 / 42%);border-color:rgb(161 222 224 / 18%)}.life-dashboard-mark{border-color:rgb(191 238 229 / 62%);color:#d8f6ec}.life-rail-button{color:rgb(198 232 227 / 58%)}.life-rail-button.is-active,.life-rail-button:hover{color:#fff;text-shadow:0 0 .7rem rgb(89 189 225 / 70%)}.life-dashboard-header h3{color:#f7fcf8}.life-dashboard-header>div>span,.life-card-heading button,.life-card-heading span{color:rgb(219 243 235 / 68%)}.life-card{border-color:rgb(178 230 220 / 17%);background:linear-gradient(145deg,rgb(133 176 174 / 30%),rgb(35 70 76 / 46%));box-shadow:inset 0 1px rgb(255 255 255 / 11%),0 .5rem 1rem rgb(2 48 71 / 10%)}.life-activity,.life-overview{background:linear-gradient(145deg,rgb(119 166 171 / 33%),rgb(35 72 79 / 48%))}.life-bars i{background:linear-gradient(#c0d8d1aa,#789fa27a)}.life-bars i.is-highlight{background:linear-gradient(#f3d54c,#c29e27)}.life-donut{background:conic-gradient(#f4c900 0 27%,#35b6e4 27% 75%,rgb(217 236 228 / 32%) 75%)}.life-donut::before{background:#315c62}.life-summary li b,.life-stat-stack strong,.life-challenge-list strong,.life-output strong{color:#f8fffb}.life-stat-stack article>span{border-color:rgb(166 228 228 / 42%);color:#a7e4ea}.life-pill.ongoing{background:#d0d949}.life-pill.done{background:#54d99a}.life-dashboard-footer{border-color:rgb(178 230 220 / 18%);color:rgb(219 243 235 / 70%)}.life-mobile-toggle{background:rgb(7 31 37 / 42%);border-color:rgb(194 239 231 / 28%)}.life-mobile-toggle:hover{background:rgb(84 194 216 / 24%)}.life-output em{background:rgb(207 232 222 / 14%);color:#e5f5ec}
+.sensor-dial{background:conic-gradient(#219ebc 0 var(--sensor-progress,74%),#cbd9dc var(--sensor-progress,74%) 100%);box-shadow:0 0 .8rem rgb(33 158 188 / 18%),inset 0 0 0 1px rgb(2 48 71 / 8%);transform:none}.sensor-dial::before{width:4.65rem;height:4.65rem;background:linear-gradient(145deg,#fff,#edf5f6);box-shadow:inset 0 .15rem .35rem rgb(2 48 71 / 10%)}.sensor-dial::after{display:none}.sensor-dial-value,.sensor-dial-unit{transform:none}.sensor-dial-value{margin-top:-.55rem;font-size:1.25rem}.sensor-dial-unit{margin-top:1.65rem}.sensor-scale>i{height:.65rem;border-radius:.5rem;background:#d7e3e5}.sensor-scale>i b{border-radius:inherit;background:linear-gradient(90deg,#168daa,#47bdd1);box-shadow:0 0 .45rem rgb(33 158 188 / 25%)}
+
 :root {
   color-scheme: light;
   --blue: #023047;
@@ -2118,11 +2379,499 @@ textarea {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+/* Industrial process monitor */
+  .life-process-strip {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.1rem;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #c8dfe3;
+    border-radius: 0.85rem;
+    background: #f8fcfc;
   }
 
+  .life-process-node {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.45rem;
+    align-items: center;
+    min-width: 0;
+    color: #527482;
+  }
+
+  .life-process-node span {
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1px solid #b7d1d6;
+    border-radius: 50%;
+    background: #edf7f7;
+    color: #527482;
+    font-size: 0.62rem;
+    font-weight: 700;
+  }
+
+  .life-process-node strong {
+    color: var(--blue);
+    font-size: 0.72rem;
+    line-height: 1.1;
+  }
+
+  .life-process-node small {
+    color: #527482;
+    font-size: 0.58rem;
+    line-height: 1.1;
+  }
+
+  .life-process-node.is-complete span,
+  .life-process-node.is-active span {
+    border-color: var(--cyan);
+    background: #d9f1f3;
+    color: var(--blue);
+  }
+
+  .life-process-node.is-active strong {
+    color: var(--cyan);
+  }
+
+  .life-process-connector {
+    flex: 1 1 1.5rem;
+    min-width: 1rem;
+    height: 1px;
+    background: #b7d1d6;
+  }
+
+  .life-mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.45rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+    background: #f8fcfc;
+  }
+
+  .life-switch-label {
+    color: #527482;
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+
+  .life-switch-track {
+    position: relative;
+    width: 2.45rem;
+    height: 1.35rem;
+    border-radius: 999px;
+    background: #c8dfe3;
+    transition: background-color 180ms ease;
+  }
+
+  .life-switch-track i {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 0.95rem;
+    height: 0.95rem;
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgb(2 48 71 / 22%);
+    transition: transform 180ms var(--ease-out);
+  }
+
+  .life-mobile-toggle.is-mobile .life-switch-track {
+    background: var(--cyan);
+  }
+
+  .life-mobile-toggle.is-mobile .life-switch-track i {
+    transform: translateX(1.1rem);
+  }
+
+  .life-mobile-toggle[aria-pressed="true"] .life-switch-label:last-child,
+  .life-mobile-toggle[aria-pressed="false"] .life-switch-label:first-child {
+    color: var(--blue);
+  }
+
+  .life-mobile-view {
+    min-height: 27rem;
+    padding: 1.2rem;
+    border: 1px solid #c8dfe3;
+    border-radius: 0.9rem;
+    background: #f8fcfc;
+  }
+
+  .life-phone {
+    border-color: #9ccbd1;
+    background: #dceff1;
+    box-shadow: 0 1rem 2rem rgb(2 48 71 / 16%);
+  }
+
+  .life-phone-notch {
+    background: var(--blue);
+  }
+
+  .life-phone-screen {
+    background: #f8fcfc;
+    color: var(--blue);
+  }
+
+  .life-phone-main,
+  .life-phone-stats>div,
+  .life-phone-chart {
+    border-color: #c8dfe3;
+    background: var(--white);
+  }
+
+  .life-phone-screen>p,
+  .life-phone-main>span,
+  .life-phone-main>small,
+  .life-phone-stats span,
+  .life-phone-stats b {
+    color: #527482;
+  }
+
+  .life-phone-main strong,
+  .life-phone-title strong,
+  .life-phone-chart strong {
+    color: var(--blue);
+  }
+
+  .life-phone-main i {
+    background: var(--cyan);
+  }
+
+  .life-phone-chart>div i {
+    background: #8bcbd0;
+  }
+
+  .life-phone-chart>div i:nth-child(5) {
+    background: #e8ad1c;
+  }
+
+  @media (max-width: 680px) {
+    .life-process-strip {
+      gap: 0.35rem;
+      overflow-x: auto;
+      margin-bottom: 0.85rem;
+      padding: 0.65rem;
+    }
+
+    .life-process-node {
+      min-width: 6rem;
+    }
+
+    .life-process-connector {
+      min-width: 0.75rem;
+    }
+
+    .life-mobile-toggle {
+      gap: 0.3rem;
+    }
+
+    .life-switch-label {
+      font-size: 0.6rem;
+    }
+
+    .life-mobile-view {
+      min-height: 0;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  }
+
+/* Clear industrial dashboard treatment */
+  .life-dashboard {
+    min-height: 500px;
+    border: 1px solid #c8dfe3;
+    border-radius: 1.25rem;
+    background: #edf7f7;
+    box-shadow: 0 1.5rem 3rem rgb(2 48 71 / 12%), 0 0 0 0.35rem rgb(33 158 188 / 7%);
+    color: var(--blue);
+  }
+
+  .life-dashboard-rail {
+    padding: 1.1rem 0.55rem;
+    background: #e2f0f1;
+    border-right: 1px solid #c8dfe3;
+  }
+
+  .life-dashboard-mark {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background: var(--white);
+  }
+
+  .life-rail-button {
+    width: 2.45rem;
+    height: 2.45rem;
+    margin: 0.3rem 0;
+    border: 1px solid transparent;
+    border-radius: 0.7rem;
+    background: transparent;
+    color: #527482;
+    cursor: pointer;
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms var(--ease-out);
+  }
+
+  .life-rail-button svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+  }
+
+  .life-rail-button.is-active,
+  .life-rail-button:hover {
+    border-color: #9ed5dc;
+    background: var(--white);
+    color: var(--blue);
+    text-shadow: none;
+    transform: translateY(-1px);
+  }
+
+  .life-dashboard-main {
+    padding: 1.45rem 1.6rem 0;
+  }
+
+  .life-dashboard-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .life-dashboard-header>div>span,
+  .life-card-heading button,
+  .life-card-heading span {
+    color: #527482;
+  }
+
+  .life-dashboard-header h3 {
+    color: var(--blue);
+    font-size: 1.75rem;
+  }
+
+  .life-online {
+    color: #27604d;
+    font-weight: 600;
+  }
+
+  .life-online i,
+  .life-dashboard-footer i {
+    background: #1c9a70;
+    box-shadow: 0 0 0 0.25rem rgb(28 154 112 / 13%);
+  }
+
+  .life-mobile-toggle {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #afd7dd;
+    border-radius: 0.6rem;
+    background: var(--white);
+    color: var(--blue);
+    cursor: pointer;
+    transition: border-color 180ms ease, background-color 180ms ease, transform 180ms var(--ease-out);
+  }
+
+  .life-mobile-toggle:hover {
+    border-color: var(--cyan);
+    background: #e3f7f8;
+    transform: translateY(-1px);
+  }
+
+  .life-mobile-toggle b {
+    color: var(--cyan);
+  }
+
+  .life-card {
+    border: 1px solid #c8dfe3;
+    border-radius: 0.85rem;
+    background: var(--white);
+    box-shadow: 0 0.5rem 1rem rgb(2 48 71 / 6%);
+  }
+
+  .life-activity,
+  .life-overview {
+    background: var(--white);
+  }
+
+  .life-card-heading strong {
+    color: var(--blue);
+    font-size: 0.86rem;
+  }
+
+  .life-card-heading button {
+    cursor: pointer;
+    transition: color 160ms ease;
+  }
+
+  .life-card-heading button:hover {
+    color: var(--cyan);
+  }
+
+  .life-bars span,
+  .life-bars b,
+  .life-summary ul,
+  .life-summary li small,
+  .life-stat-stack p,
+  .life-challenge-list small,
+  .life-output small {
+    color: #527482;
+  }
+
+  .life-bars i {
+    background: linear-gradient(180deg, #9ed8dc, #4baabd);
+  }
+
+  .life-bars i.is-highlight {
+    background: linear-gradient(180deg, #f7c948, #e59b19);
+  }
+
+  .life-donut {
+    background: conic-gradient(var(--cyan) 0 27%, #68c89f 27% 75%, #d7e8e9 75%);
+    box-shadow: 0 0.4rem 1rem rgb(33 158 188 / 15%);
+  }
+
+  .life-donut::before {
+    background: var(--white);
+  }
+
+  .life-donut strong,
+  .life-summary li b,
+  .life-stat-stack strong,
+  .life-challenge-list strong,
+  .life-output strong {
+    color: var(--blue);
+  }
+
+  .life-donut small {
+    color: #527482;
+  }
+
+  .life-summary .yellow {
+    background: #e8ad1c;
+  }
+
+  .life-summary .blue {
+    background: var(--cyan);
+  }
+
+  .life-summary .orange {
+    background: #e57d47;
+  }
+
+  .life-stat-stack article>span {
+    border-color: #9ed5dc;
+    color: var(--cyan);
+  }
+
+  .life-pill {
+    border: 1px solid transparent;
+    font-weight: 600;
+  }
+
+  .life-pill.ongoing {
+    border-color: #e8bf41;
+    background: #fff4c9;
+    color: #765900;
+  }
+
+  .life-pill.done {
+    border-color: #82cfaa;
+    background: #e4f7ed;
+    color: #17613f;
+  }
+
+  .life-challenge-list>div {
+    border-color: #dcebed;
+  }
+
+  .life-ring {
+    border-color: #8abec5;
+  }
+
+  .life-ring.complete {
+    background: #dff4e9;
+    color: #17613f;
+  }
+
+  .life-calendar>.life-card,
+  .life-output {
+    background: #f8fcfc;
+  }
+
+  .life-week {
+    color: #527482;
+  }
+
+  .life-dates .today {
+    background: #d9f1f3;
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  .life-output em {
+    background: #e5f5f2;
+    color: #27604d;
+  }
+
+  .life-dashboard-footer {
+    border-color: #c8dfe3;
+    color: #527482;
+  }
+
+  .sensor-dial {
+    position: relative;
+    background: conic-gradient(var(--cyan) 0 var(--sensor-progress, 74%), #d9e8ea var(--sensor-progress, 74%) 100%);
+    box-shadow: 0 0.45rem 1rem rgb(33 158 188 / 18%), inset 0 0 0 1px rgb(2 48 71 / 8%);
+  }
+
+  .sensor-dial::after {
+    position: absolute;
+    top: 0.75rem;
+    left: calc(50% - 0.1rem);
+    display: block;
+    width: 0.2rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    background: var(--blue);
+    box-shadow: 0 0.15rem 0.35rem rgb(2 48 71 / 20%);
+    content: "";
+    transform-origin: 50% 2.25rem;
+    transform: rotate(38deg);
+  }
+
+  @media (max-width: 680px) {
+    .life-dashboard {
+      min-height: 0;
+      border-radius: 1rem;
+    }
+
+    .life-dashboard-main {
+      padding: 1.1rem 1rem 0;
+    }
+
+    .life-dashboard-header {
+      align-items: flex-start;
+    }
+
+    .life-dashboard-header h3 {
+      font-size: 1.45rem;
+    }
+
+    .life-dashboard-actions {
+      align-items: flex-end;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+  }
+
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -2130,5 +2879,130 @@ textarea {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Final monitor pass: clearer gauges, telemetry and view states */
+.sensor-dial {
+  position: relative;
+  width: 7.2rem;
+  height: 5.2rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.05rem;
+  border: 1px solid #9ccbd1;
+  border-radius: 0.85rem;
+  background: linear-gradient(160deg, #ffffff 0%, #e8f5f6 100%);
+  box-shadow: 0 0.45rem 1rem rgb(2 48 71 / 10%);
+  transform: none;
+}
+
+.sensor-dial::before,
+.sensor-dial::after {
+  display: none;
+}
+
+.sensor-dial::after {
+  content: none;
+}
+
+.sensor-dial-value,
+.sensor-dial-unit {
+  position: static;
+  transform: none;
+}
+
+.sensor-dial-value {
+  color: var(--blue);
+  font-size: 1.65rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.sensor-dial-unit {
+  color: #527482;
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
+.sensor-dial::marker {
+  display: none;
+}
+
+.life-mobile-view[hidden],
+.life-stock-view[hidden] {
+  display: none !important;
+}
+
+.life-mobile-toggle .life-switch-label {
+  color: #527482 !important;
+  font-size: 0.68rem;
+}
+
+.life-mobile-toggle[aria-pressed="false"] .life-switch-label:first-child,
+.life-mobile-toggle[aria-pressed="true"] .life-switch-label:last-child {
+  color: var(--blue) !important;
+  font-weight: 700;
+}
+
+.life-mobile-toggle {
+  border-color: #8dbfc7;
+  background: #ffffff;
+  color: var(--blue);
+}
+
+.life-mobile-toggle:hover,
+.life-mobile-toggle:focus-visible {
+  border-color: var(--blue);
+  background: #e3f7f8;
+}
+
+.life-bars i {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #48adc0 0%, #167b98 100%);
+  box-shadow: 0 0.25rem 0.55rem rgb(33 158 188 / 18%);
+  transition: height 900ms var(--ease-out), filter 180ms ease;
+}
+
+.life-bars i::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 20%, rgb(255 255 255 / 28%) 50%, transparent 80%);
+  content: "";
+  transform: translateX(-120%);
+  animation: telemetry-shimmer 2.8s linear infinite;
+}
+
+.life-bars i.is-highlight {
+  background: linear-gradient(180deg, #f3c64b 0%, #d98b16 100%);
+}
+
+.life-bars span {
+  color: var(--blue);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.life-temperature-value {
+  font-variant-numeric: tabular-nums;
+  transition: color 250ms ease;
+}
+
+@keyframes telemetry-shimmer {
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@media (max-width: 680px) {
+  .sensor-dial {
+    width: 6rem;
+    height: 4.8rem;
+  }
+
+  .life-mobile-toggle .life-switch-label {
+    font-size: 0.58rem;
   }
 }

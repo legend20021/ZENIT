@@ -220,6 +220,10 @@
               </div>
               <strong class="readout-title" id="sensor-title">RS‑485</strong>
               <p class="readout-copy" id="sensor-copy">Integramos equipos y sensores compatibles con RS‑485; se valida cada modelo y la información requerida.</p>
+              <div class="sensor-instrument" data-sensor-instrument>
+                <div class="sensor-dial"><span class="sensor-dial-value" id="sensor-dial-value">485</span><small id="sensor-dial-unit">bus</small></div>
+                <div class="sensor-scale"><div><span id="sensor-scale-label">Trama de comunicación</span><strong id="sensor-scale-status">Activa</strong></div><i><b id="sensor-scale-fill"></b></i><small><span id="sensor-scale-min">0</span><span id="sensor-scale-mid">Señal</span><span id="sensor-scale-max">100%</span></small></div>
+              </div>
               <svg class="readout-trace" viewBox="0 0 440 48" role="img" aria-label="Visualización abstracta de una señal">
                 <path class="trace-base" d="M2 24h436"/>
                 <path class="trace-line" d="M2 24h56l9-10 12 20 13-27 12 17h59l10-9 12 18 13-24 13 15h64l10-8 12 18 12-20 12 10h84"/>
@@ -236,15 +240,42 @@
             <h2 id="interface-title">El proceso también se controla desde una pantalla.</h2>
             <p>Desarrollamos interfaces web y móviles para consultar variables, revisar el estado de la operación y enviar acciones de control. La conexión puede ser local por Wi‑Fi o en línea, de acuerdo con la arquitectura de cada proyecto.</p>
           </div>
-          <div class="interface-gallery">
-            <figure class="interface-shot interface-shot-web">
-              <img src="assets/images/interface-web.jpg" alt="Mockup de interfaz web ZENIT para visualizar y controlar variables de un proceso" width="1280" height="1024" loading="lazy">
-              <figcaption><strong>Interfaz web</strong><span>Consulta de variables y estado del proceso.</span></figcaption>
-            </figure>
-            <figure class="interface-shot interface-shot-mobile">
-              <img src="assets/images/interface-mobile.jpg" alt="Mockup de interfaces móviles con identidad de Zenit Group" width="1280" height="1024" loading="lazy">
-              <figcaption><strong>Interfaz móvil</strong><span>Acceso práctico desde un teléfono.</span></figcaption>
-            </figure>
+          <div class="life-dashboard" aria-label="Dashboard simulado de monitoreo">
+            <aside class="life-dashboard-rail" aria-label="Secciones del dashboard">
+              <span class="life-dashboard-mark">Z</span>
+              <button class="life-rail-button is-active" type="button" aria-label="Resumen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-7 8 7v9H4zM9 20v-5h6v5"/></svg></button>
+              <button class="life-rail-button" type="button" aria-label="Actividad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9m5 10V5m6 14v-7m5 7V3"/></svg></button>
+              <button class="life-rail-button" type="button" aria-label="Calendario"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4m8-4v4M4 10h16"/></svg></button>
+              <button class="life-rail-button" type="button" aria-label="Configuración"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><path d="m19 13 .1-1-.1-1 1.7-1.3-1.8-3.1-2 .8a8 8 0 0 0-1.8-1L14.8 4h-3.6l-.3 2.4a8 8 0 0 0-1.8 1l-2-.8-1.8 3.1L7 11a8 8 0 0 0 0 2l-1.7 1.3 1.8 3.1 2-.8a8 8 0 0 0 1.8 1l.3 2.4h3.6l.3-2.4a8 8 0 0 0 1.8-1l2 .8 1.8-3.1z"/></svg></button>
+            </aside>
+            <div class="life-dashboard-main">
+              <header class="life-dashboard-header">
+                <div><span>Línea de proceso · Planta 01</span><h3>ZENIT Control</h3></div>
+                <div class="life-dashboard-actions"><span class="life-online"><i></i> Sistema activo</span><button class="life-mobile-toggle" id="life-mobile-toggle" type="button" aria-pressed="false" aria-label="Cambiar a vista móvil"><span class="life-switch-label">Escritorio</span><span class="life-switch-track" aria-hidden="true"><i></i></span><span class="life-switch-label">Móvil</span></button></div>
+              </header>
+              <div class="life-process-strip" aria-label="Flujo de proceso industrial">
+                <div class="life-process-node is-complete"><span>01</span><strong>Captura</strong><small>Sensores</small></div>
+                <div class="life-process-connector" aria-hidden="true"></div>
+                <div class="life-process-node is-active"><span>02</span><strong>Control</strong><small>PLC / relés</small></div>
+                <div class="life-process-connector" aria-hidden="true"></div>
+                <div class="life-process-node"><span>03</span><strong>Acción</strong><small>Equipos</small></div>
+                <div class="life-process-connector" aria-hidden="true"></div>
+                <div class="life-process-node"><span>04</span><strong>Registro</strong><small>Datos locales</small></div>
+              </div>
+              <div class="life-stock-view" id="life-stock-view">
+                <div class="life-dashboard-grid">
+                  <section class="life-activity life-card"><div class="life-card-heading"><strong>Flujo de proceso</strong><button type="button">Últimas 24 h⌄</button></div><div class="life-bars"><div><span>23%</span><i style="--level:42%"></i><b>00 h</b></div><div><span>55%</span><i style="--level:70%"></i><b>04 h</b></div><div><span>50%</span><i style="--level:65%"></i><b>08 h</b></div><div><span>40%</span><i style="--level:54%"></i><b>12 h</b></div><div><span>65%</span><i class="is-highlight" style="--level:82%"></i><b>16 h</b></div><div><span>30%</span><i style="--level:48%"></i><b>20 h</b></div><div><span>38%</span><i style="--level:58%"></i><b>24 h</b></div></div></section>
+                  <section class="life-overview life-card"><div class="life-card-heading"><strong>Estado de operación</strong><button type="button">En tiempo real⌄</button></div><div class="life-summary"><div class="life-donut"><span><strong>75%</strong><small>disponibilidad</small></span></div><ul><li><i class="yellow"></i>Control activo <b>3 señales <small>estables</small></b></li><li><i class="blue"></i>Registro local <b>37.5 <small>MB</small></b></li><li><i class="orange"></i>Conectividad <b>En línea <small>Wi‑Fi</small></b></li></ul></div></section>
+                  <section class="life-stat-stack"><article class="life-card"><span>°C</span><div><strong class="life-temperature-value">35.0 <small>°C</small></strong><p>Temperatura</p></div></article><article class="life-card"><span>⌁</span><div><strong>4.8 <small>bar</small></strong><p>Presión de línea</p></div></article><article class="life-card"><span>▥</span><div><strong>78 <small>%</small></strong><p>Nivel de depósito</p></div></article></section>
+                </div>
+                <div class="life-bottom-grid">
+                  <section class="life-challenges"><div class="life-card-heading"><strong>Estado de equipos</strong><span>3 activos</span></div><div class="life-challenge-list life-card"><div><i class="life-ring active"></i><strong>Bomba de proceso</strong><small>Operando</small><button class="life-pill ongoing" type="button">En curso</button></div><div><i class="life-ring complete">✓</i><strong>Válvula de entrada</strong><small>Verificada</small><button class="life-pill done" type="button">Completo</button></div><div><i class="life-ring"></i><strong>Registro de variables</strong><small>Preparado</small><button class="life-pill ongoing" type="button">En curso</button></div></div></section>
+                  <section class="life-calendar"><div class="life-card-heading"><strong>Agenda de mantenimiento</strong><span>‹　›</span></div><div class="life-card"><div class="life-week"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div><div class="life-dates"><span>18</span><span>19</span><span class="today">20</span><span>21</span><span>22</span><span>23</span><span>24</span></div></div><div class="life-card life-output"><strong>2 tareas</strong><small>Próxima revisión</small><em>programada</em></div></section>
+                </div>
+              </div>
+              <div class="life-mobile-view" id="life-mobile-view" hidden><div class="life-phone"><div class="life-phone-notch"></div><div class="life-phone-screen"><div class="life-phone-status"><span>9:41</span><span>● ◔ ▰</span></div><div class="life-phone-title"><span>‹</span><strong>ZENIT Control</strong><span>•••</span></div><p>Estado del proceso</p><div class="life-phone-main"><span>Disponibilidad</span><strong>75<small>%</small></strong><i></i><small>Registro local sincronizado</small></div><div class="life-phone-stats"><div><span>Temperatura</span><strong class="life-temperature-value">35.0 <small>°C</small></strong><b>Estable</b></div><div><span>Nivel</span><strong>78 <small>%</small></strong><b>Supervisado</b></div></div><div class="life-phone-chart"><strong>Señal de proceso</strong><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>L　M　M　J　V　S　D</small></div><nav>⌂　◌　＋　▣　●</nav></div></div><div class="life-mobile-copy"><span>Vista móvil</span><h3>La operación en tu bolsillo.</h3><p>Consulta variables, equipos y estado desde un teléfono dentro del mismo panel.</p><button id="life-stock-back" type="button">Volver a vista general ↩</button></div></div>
+              <footer class="life-dashboard-footer"><span><i></i> Registro local activo</span><span>Sincronización preparada</span></footer>
+            </div>
           </div>
           <p class="interface-credit">Aplicaciones digitales desarrolladas por Zenit Group.</p>
         </div>
