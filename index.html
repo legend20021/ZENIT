@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#023047">
+    <meta name="description" content="Conoce cómo ZENIT ayuda a controlar procesos industriales, registrar información y conectar datos con la nube.">
+    <title>ZENIT | Automatización industrial</title>
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+    <link rel="preload" href="assets/fonts/GillSansMT.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/module-profile.png" as="image" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="splash" id="splash" aria-hidden="true" hidden>
+      <div class="splash-content">
+        <img src="assets/brand/zenit-light.svg" alt="">
+        <p>Tecnología que conecta señales, equipos y decisiones.</p>
+        <svg class="splash-route" viewBox="0 0 270 42" aria-hidden="true">
+          <path class="splash-route-base" d="M18 21h234"/>
+          <path class="splash-route-signal" d="M18 21h234"/>
+          <circle cx="18" cy="21" r="5"/>
+          <circle cx="135" cy="21" r="5"/>
+          <circle cx="252" cy="21" r="5"/>
+        </svg>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="ZENIT, inicio">
+          <img src="assets/brand/zenit-isotipo-negative.svg" alt="">
+          <span>ZENIT</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Navegación principal">
+          <a href="#solucion">Solución</a>
+          <a href="#sensores">Sensores</a>
+          <a href="#interfaces">Interfaces</a>
+          <a href="#quienes-somos">Zenit Group</a>
+          <a class="nav-contact" href="#prueba">Coordinar una prueba</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="container hero-shell">
+          <div class="hero-top">
+            <div class="hero-copy">
+              <h1 id="hero-title">Control, datos y acción para la industria.</h1>
+              <p class="hero-description">Integramos sensores, relés y aplicaciones web o móviles para supervisar procesos, guardar datos y actuar sobre la maquinaria.</p>
+              <div class="hero-actions">
+                <a class="button button-light" href="#prueba">
+                  Diseñar una solución
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+                </a>
+                <a class="text-link text-link-light" href="#solucion">
+                  Explorar capacidades
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+                </a>
+              </div>
+              <ul class="hero-points" aria-label="Capacidades principales">
+                <li>Control</li>
+                <li>Registro local</li>
+                <li>Conectividad</li>
+                <li>México · Colombia</li>
+              </ul>
+            </div>
+
+            <div class="hero-equipment" aria-label="Vista exterior del equipo de control ZENIT">
+              <img class="equipment-main" src="assets/images/module-profile.png" alt="ZENIT, módulo de automatización industrial visto de perfil" width="1283" height="659" fetchpriority="high">
+              <span class="equipment-caption">Una solución que se adapta a cada proceso.</span>
+            </div>
+          </div>
+
+          <div class="process-visual" aria-labelledby="process-visual-title">
+            <div class="process-heading">
+              <h2 id="process-visual-title">Del proceso al dato, y del dato a la acción.</h2>
+              <p>Una integración pensada alrededor de la operación.</p>
+            </div>
+            <div class="process-route">
+              <svg class="process-track" viewBox="0 0 720 64" role="img" aria-labelledby="track-title track-description">
+                <title id="track-title">Recorrido de un proceso industrial conectado</title>
+                <desc id="track-description">Una línea abstracta conecta control, registro de información y consulta de datos.</desc>
+                <path class="track-base" d="M120 32H600"/>
+                <path class="track-signal" d="M120 32H600"/>
+                <circle class="track-node" cx="120" cy="32" r="7"/>
+                <circle class="track-node" cx="360" cy="32" r="7"/>
+                <circle class="track-node" cx="600" cy="32" r="7"/>
+              </svg>
+              <div class="process-stages" aria-label="Capacidades del recorrido">
+                <button class="process-stage is-active" type="button" data-stage="control" aria-pressed="true">
+                  <span class="stage-icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="M6 25V12l10-6 10 6v13M11 25v-8h10v8M4 26h24"/></svg>
+                  </span>
+                  <span>Control</span>
+                </button>
+                <button class="process-stage" type="button" data-stage="registro" aria-pressed="false">
+                  <span class="stage-icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="M9 5h10l5 5v17H9zM19 5v6h6M13 16h7M13 20h7M13 24h5"/></svg>
+                  </span>
+                  <span>Registro</span>
+                </button>
+                <button class="process-stage" type="button" data-stage="nube" aria-pressed="false">
+                  <span class="stage-icon" aria-hidden="true">
+                    <svg viewBox="0 0 32 32"><path d="M9 24h15a5 5 0 0 0 1-9.9A8 8 0 0 0 9.7 12a6 6 0 0 0-.7 12Z"/><path d="M16 17v9m-4-4 4 4 4-4"/></svg>
+                  </span>
+                  <span>Nube</span>
+                </button>
+              </div>
+            </div>
+            <p class="process-note" id="process-note" aria-live="polite">Supervisa señales y coordina acciones en el proceso.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="capabilities section-space" id="solucion" aria-labelledby="capabilities-title">
+        <div class="container capabilities-layout">
+          <div class="section-intro">
+            <h2 id="capabilities-title">Más claridad en cada etapa de la operación.</h2>
+            <p>Conectamos señales de campo, automatización y software para que cada máquina responda a las necesidades de su operación. La información puede conservarse localmente, consultarse en una interfaz conectada por Wi‑Fi o sincronizarse con servicios en línea.</p>
+          </div>
+          <div class="capability-list">
+            <article class="capability-row" data-reveal>
+              <span class="capability-symbol" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M5 8h8v8H5zM19 16h8v8h-8zM13 12h6v8M9 16v5h10"/></svg>
+              </span>
+              <div>
+                <h3>Supervisión y control</h3>
+                <p>Lee variables del proceso y coordina secuencias de trabajo para diferentes máquinas y equipos.</p>
+              </div>
+            </article>
+            <article class="capability-row" data-reveal data-reveal-delay="1">
+              <span class="capability-symbol" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M9 5h10l5 5v17H9zM19 5v6h6M13 16h7M13 20h7M13 24h5"/></svg>
+              </span>
+              <div>
+                <h3>Registro local y en la nube</h3>
+                <p>Guarda información operativa en el equipo y, cuando la aplicación lo requiere, facilita su consulta desde la nube.</p>
+              </div>
+            </article>
+            <article class="capability-row" data-reveal data-reveal-delay="2">
+              <span class="capability-symbol" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M8 23h16a5 5 0 0 0 .8-9.9A8 8 0 0 0 8.5 11 6 6 0 0 0 8 23Z"/><path d="M12 17h8m-4-4 4 4-4 4"/></svg>
+              </span>
+              <div>
+                <h3>Conectividad para cada entorno</h3>
+                <p>Interfaces web o móviles para revisar y controlar procesos por Wi‑Fi, de forma local o en línea según la configuración.</p>
+              </div>
+            </article>
+            <article class="capability-row" data-reveal data-reveal-delay="3">
+              <span class="capability-symbol" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M7 8h18v16H7zM11 12h10M11 16h6M11 20h10M4 13h3M25 19h3"/></svg>
+              </span>
+              <div>
+                <h3>Accionamiento de equipos</h3>
+                <p>Las salidas por relé pueden comandar contactores para accionar motores, bombas, válvulas y compuertas, según la etapa de potencia requerida.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="equipment-section section-space" aria-labelledby="equipment-title">
+        <div class="container">
+          <div class="equipment-intro">
+            <h2 id="equipment-title">Tecnología para integrarse a tu maquinaria.</h2>
+            <p>Un mismo sistema puede acompañar distintos equipos y etapas de operación. La integración se define según las señales, el control y la información que necesita cada proceso.</p>
+          </div>
+          <div class="equipment-gallery">
+            <figure class="equipment-shot equipment-shot-front" data-reveal>
+              <img src="assets/images/module-4-frontal.png" alt="Vista frontal del módulo de control ZENIT" width="1189" height="768" loading="lazy">
+              <figcaption>Diseño frontal</figcaption>
+            </figure>
+            <figure class="equipment-shot equipment-shot-side" data-reveal data-reveal-delay="1">
+              <img src="assets/images/module-side-view.png" alt="Vista lateral del módulo de control ZENIT" width="768" height="1394" loading="lazy">
+              <figcaption>Perfil del equipo</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="sensor-section section-space" id="sensores" aria-labelledby="sensors-title">
+        <div class="container sensor-layout">
+          <div class="sensor-intro">
+            <h2 id="sensors-title">Sensores para las variables de tu proceso.</h2>
+            <p>Integramos instrumentos de campo para supervisar variables y alimentar el control. La compatibilidad se confirma según el sensor y cada proceso.</p>
+            <div class="protocol-note">
+              <span class="protocol-mark" aria-hidden="true">485</span>
+              <div>
+                <h3>Comunicación RS‑485</h3>
+                <p>Comunicamos con sensores compatibles por RS‑485. El protocolo y el equipo se validan de acuerdo con cada aplicación.</p>
+              </div>
+            </div>
+            <p class="sensor-methods">Integramos equipos por RS‑485, señales industriales de 4–20 mA y medición de temperatura con Pt100 o termocuplas.</p>
+            <a class="sensor-contact" href="https://wa.me/573187284464?text=Hola%2C%20quiero%20consultar%20la%20compatibilidad%20de%20un%20sensor%20para%20mi%20proceso." target="_blank" rel="noopener noreferrer">
+              Consultar compatibilidad de un sensor
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+            </a>
+          </div>
+          <div class="sensor-explorer">
+            <div class="sensor-choices" role="group" aria-label="Explorar tipos de sensores">
+              <button class="sensor-choice is-selected" type="button" data-sensor="rs485" aria-pressed="true">RS‑485</button>
+              <button class="sensor-choice" type="button" data-sensor="ma" aria-pressed="false">4–20 mA</button>
+              <button class="sensor-choice" type="button" data-sensor="pt100" aria-pressed="false">Temperatura (Pt100)</button>
+              <button class="sensor-choice" type="button" data-sensor="termocupla" aria-pressed="false">Termocuplas</button>
+              <button class="sensor-choice" type="button" data-sensor="ph" aria-pressed="false">pH</button>
+              <button class="sensor-choice" type="button" data-sensor="nivel" aria-pressed="false">Nivel</button>
+              <button class="sensor-choice" type="button" data-sensor="presion" aria-pressed="false">Presión</button>
+            </div>
+            <div class="sensor-readout" aria-live="polite" aria-atomic="true">
+              <div class="readout-topline">
+                <span>Tipo de variable</span>
+                <span class="readout-state"><i></i> Por evaluar</span>
+              </div>
+              <strong class="readout-title" id="sensor-title">RS‑485</strong>
+              <p class="readout-copy" id="sensor-copy">Integramos equipos y sensores compatibles con RS‑485; se valida cada modelo y la información requerida.</p>
+              <svg class="readout-trace" viewBox="0 0 440 48" role="img" aria-label="Visualización abstracta de una señal">
+                <path class="trace-base" d="M2 24h436"/>
+                <path class="trace-line" d="M2 24h56l9-10 12 20 13-27 12 17h59l10-9 12 18 13-24 13 15h64l10-8 12 18 12-20 12 10h84"/>
+              </svg>
+              <p class="compatibility-note">La compatibilidad depende de la señal, el sensor y las condiciones de cada instalación.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interface-section section-space" id="interfaces" aria-labelledby="interface-title">
+        <div class="container">
+          <div class="interface-intro" data-reveal>
+            <h2 id="interface-title">El proceso también se controla desde una pantalla.</h2>
+            <p>Desarrollamos interfaces web y móviles para consultar variables, revisar el estado de la operación y enviar acciones de control. La conexión puede ser local por Wi‑Fi o en línea, de acuerdo con la arquitectura de cada proyecto.</p>
+          </div>
+          <div class="interface-gallery">
+            <figure class="interface-shot interface-shot-web">
+              <img src="assets/images/interface-web.jpg" alt="Mockup de interfaz web ZENIT para visualizar y controlar variables de un proceso" width="1280" height="1024" loading="lazy">
+              <figcaption><strong>Interfaz web</strong><span>Consulta de variables y estado del proceso.</span></figcaption>
+            </figure>
+            <figure class="interface-shot interface-shot-mobile">
+              <img src="assets/images/interface-mobile.jpg" alt="Mockup de interfaces móviles con identidad de Zenit Group" width="1280" height="1024" loading="lazy">
+              <figcaption><strong>Interfaz móvil</strong><span>Acceso práctico desde un teléfono.</span></figcaption>
+            </figure>
+          </div>
+          <p class="interface-credit">Aplicaciones digitales desarrolladas por Zenit Group.</p>
+        </div>
+      </section>
+
+      <section class="applications section-space" id="aplicaciones" aria-labelledby="applications-title">
+        <div class="container applications-layout">
+          <div class="applications-heading">
+            <h2 id="applications-title">Hecho para acompañar la maquinaria industrial.</h2>
+            <p>Adaptamos la integración a la maquinaria, las señales disponibles y el tipo de supervisión que necesita cada operación.</p>
+          </div>
+          <ul class="application-list">
+            <li><span>Maquinaria industrial que requiere coordinar procesos</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg></li>
+            <li><span>Equipos que leen sensores y accionan motores, bombas, válvulas o compuertas</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg></li>
+            <li><span>Operaciones que guardan datos localmente y los consultan en línea</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-section section-space" id="quienes-somos" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div class="about-copy">
+            <h2 id="about-title">Tecnología para que la industria avance.</h2>
+            <p>Zenit Group transforma la complejidad industrial en soluciones inteligentes y accesibles, enfocadas en impulsar la eficiencia, la productividad y la sostenibilidad de las operaciones.</p>
+          </div>
+          <div class="about-pillars">
+            <article>
+              <h3>Nuestra misión</h3>
+              <p>Democratizar la automatización industrial de clase mundial.</p>
+            </article>
+            <article>
+              <h3>Nuestra visión</h3>
+              <p>Contribuir a un ecosistema industrial autónomo, interoperable y resiliente.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section section-space" id="prueba" aria-labelledby="demo-title">
+        <div class="container demo-layout">
+          <div class="demo-copy">
+            <h2 id="demo-title">Conversemos sobre tu proceso.</h2>
+            <p>Cuéntanos en qué consiste tu operación y coordinaremos una conversación para revisar su alcance, los sensores y la conectividad que necesitas.</p>
+            <p class="demo-reassurance">Sin formularios largos. No compartas planos ni datos confidenciales por este medio.</p>
+            <a class="direct-contact" href="https://wa.me/573187284464?text=Hola%2C%20quiero%20coordinar%20una%20demostraci%C3%B3n%20de%20la%20soluci%C3%B3n%20ZENIT." target="_blank" rel="noopener noreferrer">
+              Escríbenos por WhatsApp
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+            </a>
+          </div>
+          <form class="demo-form" id="demo-form" action="https://wa.me/573187284464" method="get" target="_blank">
+            <label for="visitor-interest">¿Qué quieres explorar?</label>
+            <select id="visitor-interest" name="interest">
+              <option value="Conocer la solución">Conocer la solución</option>
+              <option value="Controlar un proceso industrial">Controlar un proceso industrial</option>
+              <option value="Integrar sensores o equipos compatibles con RS-485">Integrar equipos RS‑485</option>
+              <option value="Integrar señales 4-20 mA, sensores Pt100 o termocuplas">Integrar 4–20 mA, Pt100 o termocuplas</option>
+              <option value="Conectar datos a la nube">Conectar datos a la nube</option>
+            </select>
+            <input id="whatsapp-message" name="text" type="hidden">
+            <button class="button button-primary form-submit" type="submit">
+              <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4.5a11.2 11.2 0 0 0-9.6 17l-1.1 5 5.2-1.1A11.3 11.3 0 1 0 16 4.5Z"/><path d="M12.1 10.7c-.3-.7-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.3 2.5 4 6.1 5.4 3 .1 3.6 0 4.2-.5.7-.5 1.2-1.3 1.3-1.8.2-.4.2-.8.1-.9-.1-.2-.3-.3-.7-.5l-2.2-1c-.3-.1-.6-.2-.8.2l-.9 1.1c-.2.2-.4.3-.7.1a9.3 9.3 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6l.6-.7.4-.6c.1-.2 0-.4 0-.6Z"/></svg>
+              Abrir conversación
+              <svg class="button-arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+            </button>
+            <p class="privacy-note">WhatsApp abrirá un mensaje para que lo revises antes de enviarlo. No guardamos tus respuestas.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="#inicio" aria-label="ZENIT, volver al inicio">
+            <img src="assets/brand/zenit-light.svg" alt="ZENIT">
+          </a>
+          <p>Automatización y soluciones digitales para procesos industriales.</p>
+        </div>
+        <div class="footer-locations" aria-label="Presencia de Zenit Group">
+          <h2>Una operación binacional</h2>
+          <p>Empresa colombo-mexicana</p>
+          <div><span>Colombia</span><span>México</span></div>
+        </div>
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <a href="#solucion">Soluciones</a>
+          <a href="#interfaces">Interfaces</a>
+          <a href="#prueba">Contacto</a>
+        </nav>
+        <p class="footer-legal">© <span id="current-year">2026</span> Zenit Group. Tecnología con propósito industrial.</p>
+      </div>
+    </footer>
+
+    <div class="whatsapp-widget">
+      <aside class="whatsapp-panel" id="whatsapp-panel" aria-labelledby="whatsapp-panel-title" hidden>
+        <button class="whatsapp-close" id="whatsapp-close" type="button" aria-label="Cerrar mensaje">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+        </button>
+        <h2 id="whatsapp-panel-title">¿Hablamos de tu proceso?</h2>
+        <p>Cuéntanos qué necesitas integrar y te orientamos con el siguiente paso.</p>
+        <a class="whatsapp-panel-link" href="https://wa.me/573187284464?text=Hola%2C%20quiero%20asesor%C3%ADa%20para%20un%20proceso%20industrial." target="_blank" rel="noopener noreferrer">
+          Iniciar conversación
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+        </a>
+      </aside>
+      <button class="whatsapp-float" id="whatsapp-toggle" type="button" aria-expanded="false" aria-controls="whatsapp-panel">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4.5a11.2 11.2 0 0 0-9.6 17l-1.1 5 5.2-1.1A11.3 11.3 0 1 0 16 4.5Z"/><path d="M12.1 10.7c-.3-.7-.7-.7-1-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.3 2.5 4 6.1 5.4 3 .1 3.6 0 4.2-.5.7-.5 1.2-1.3 1.3-1.8.2-.4.2-.8.1-.9-.1-.2-.3-.3-.7-.5l-2.2-1c-.3-.1-.6-.2-.8.2l-.9 1.1c-.2.2-.4.3-.7.1a9.3 9.3 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6l.6-.7.4-.6c.1-.2 0-.4 0-.6Z"/></svg>
+        <span>Hablemos</span>
+        <svg class="widget-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg>
+      </button>
+    </div>
+  </body>
+</html>
